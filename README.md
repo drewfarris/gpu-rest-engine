@@ -36,7 +36,7 @@ $ docker build -t inference_server -f Dockerfile.tensorrt_server .
 ## Starting the server
 Execute the following command and wait a few seconds for the initialization of the classifiers:
 ```
-$ nvidia-docker run --name=server --net=host --rm inference_server
+$ nvidia-docker run --name=server --net=host --rm caffe_server
 ```
 You can use the environment variable [`NV_GPU`](https://github.com/NVIDIA/nvidia-docker/wiki/Using-nvidia-docker#gpu-isolation) to isolate GPUs for this container.
 
