@@ -25,6 +25,14 @@ $ docker build -t inference_server -f Dockerfile.caffe_server .
 ```
 To speedup the build you can modify [this line](https://github.com/NVIDIA/gpu-rest-engine/blob/master/Dockerfile.caffe_server#L5) to only build for the GPU architecture that you need.
 
+## Build command (Caffe CPU-Only Mode)
+For operating on a machine without GPUs or to compare GPU to CPU performance:
+```
+$ docker build -t inference_server -f Dockerfile.caffe_server_cpu .
+```
+
+This image can be run without nvidia-docker
+
 ## Build command (TensorRT)
 This command requires the TensorRT archive to be present in the current folder.
 ```
@@ -98,7 +106,6 @@ Summary:
   Average:      0.0002 secs
   Requests/sec: 34440.3083   
 ```
-
 
 ## Contributing
 
